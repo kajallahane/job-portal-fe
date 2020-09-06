@@ -11,11 +11,11 @@ class Home extends React.Component {
   }
 
   render = () => {
-
+    console.log(this.props);
     return (
       <Container maxWidth="sm" >
         <div className="jobs-home-container">
-          <Button variant="contained" color="primary">
+          <Button onClick={() => this.props.history.push("/candidatehome")} variant="contained" color="primary">
             Candidate login
         </Button>
           <Button variant="contained" color="secondary">
