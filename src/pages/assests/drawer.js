@@ -133,6 +133,7 @@ export default function PersistentDrawerLeft(props) {
           {props.routeData.map((obj) => (
             <ListItem button key={obj.item}>
               <ListItemText primary={obj.item} />
+              <Divider />
             </ListItem>
           ))}
         </List>

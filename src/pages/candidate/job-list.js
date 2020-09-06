@@ -17,9 +17,9 @@ export default function JobList(){
             <div className="job-list">
                 <PersistentDrawerLeft routeData={routeData} />
                     <div id="cardsDiv" style={{"margin": "auto","width": "65%"}}>
-                    {
+                    {   
                         postedJob.map( obj=> {
-                            return OutlinedCard(obj) 
+                            return OutlinedCard(obj)
                         })
                     }
                     </div>
