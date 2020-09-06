@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import OutlinedCard from '../assests/cards'
 import PersistentDrawerLeft from '../assests/drawer'
+import { getJobList } from "../../server/Server";
 import './joblist.css'
 
 export default function JobList(props) {
-    let postedJob = [
-        { jobId: 1, title: "Senior Software Enginner", location: "Pune", organization: "TCS", experience: 3 },
-        { jobId: 2, title: "Feature Team Lead", location: "Australia", organization: "Telstra", experience: 5 }
-    ]
+    const [jobs, setJobs] = useState([]);
+    async function fetchJobs() {
+        const result = await getJobList()
+        setJobs(result.data);
+    }
+
+    useEffect(() => {
+        fetchJobs();
+    }, []);
+
+
     const routeData = [
         { url: "/candidatehome", item: "Job" },
         { url: "/requeststatus", item: "Request Status" }
     ]
-
     return (
         <React.Fragment>
             <PersistentDrawerLeft routeData={routeData} history={props.history} />
@@ -23,9 +30,9 @@ export default function JobList(props) {
                 <div className="job-list">
                     <div id="cardsDiv">
                         {
-                            postedJob.map(obj => {
-                                return OutlinedCard(obj)
-                            })
+                            jobs.length && jobs.map(obj =>
+                                <OutlinedCard {...obj} />
+                            )
                         }
                     </div>
                 </div>

@@ -3,7 +3,6 @@ import PersistentDrawerLeft from '../assests/drawer'
 import RequestTimeline from '../assests/timeline'
 
 export default function RequestStatus(props) {
-
     let jobRequestStatus = [
         { "status": ["Applied", "Conversation"] },
         { "status": ["Applied", "Conversation", "Interview Process"] }
@@ -17,9 +16,9 @@ export default function RequestStatus(props) {
         <div className="job-list">
             <PersistentDrawerLeft routeData={routeData} history={props.history} />
             <div id="reqStatus" style={{ "margin": "auto", "width": "65%" }}>
-                {jobRequestStatus.map((obj) => {
-                    return RequestTimeline(obj)
-                })
+                {jobRequestStatus.map((obj) =>
+                    <RequestTimeline {...obj} />
+                )
                 }
             </div>
         </div>

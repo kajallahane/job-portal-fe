@@ -6,35 +6,15 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
-
 export default function OutlinedCard(props) {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
   return (
-    <Card className={classes.root} variant="outlined">
+    <Card variant="outlined">
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {props.organization}
+        <Typography color="textSecondary" gutterBottom>
+          {props.company}
         </Typography>
         <Typography variant="h5" component="h2">
-            {props.title}{bull}{props.location}{bull}{props.experience}
+          {props.title} . {props.location} . {props.expectedExperience}
         </Typography>
       </CardContent>
       <CardActions>

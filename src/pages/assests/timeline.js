@@ -43,7 +43,7 @@ export default function RequestTimeline(props) {
       <Timeline>
         <TimelineItem>
           <TimelineSeparator>
-            {status.includes("Applied") ? <TimelineDot style={{ "background-color": "#34ca22" }} /> : <TimelineDot />}
+            {status.includes("Applied") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
             {/* <TimelineDot/> */}
             <TimelineConnector />
           </TimelineSeparator>
@@ -52,21 +52,21 @@ export default function RequestTimeline(props) {
         <TimelineItem>
           <TimelineSeparator>
             {/* <TimelineDot/> */}
-            {status.includes("Conversation") ? <TimelineDot style={{ "background-color": "#34ca22" }} /> : <TimelineDot />}
+            {status.includes("Conversation") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>Conversation</TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            {status.includes("Interview Process") ? <TimelineDot style={{ "background-color": "#34ca22" }} /> : <TimelineDot />}
+            {status.includes("Interview Process") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>Interview Process</TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            {status.includes("Apprrove/Rejected") ? <TimelineDot style={{ "background-color": "#34ca22" }} /> : <TimelineDot />}
+            {status.includes("Apprrove/Rejected") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
             {/* <TimelineDot/> */}
           </TimelineSeparator>
           <TimelineContent >Apprrove/Rejected</TimelineContent>
