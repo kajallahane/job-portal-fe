@@ -1,0 +1,9 @@
+.job-list-container {
+    margin:auto;
+    width: 65%;
+}
+
+.job-list-title {
+    margin-top:30px;
+    margin-bottom:30px;
+}
