@@ -1,0 +1,16 @@
+.job-request-container {
+    background-color: #ffffff;
+    display: flex;
+    margin: 20px;
+    box-shadow: 5px 5px 4px 5px #888888;
+}
+
+.timeline-container {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+.job-request-summary {
+    margin: 20px;
+}

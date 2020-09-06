@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,7 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import { Button, IconButton, ListItem, ListItemText } from '@material-ui/core';
+import { IconButton, ListItem, ListItemText } from '@material-ui/core';
 import './drawer.css';
 
 const drawerWidth = 240;
@@ -73,16 +73,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PersistentDrawerLeft(props) {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div className={classes.root}>
