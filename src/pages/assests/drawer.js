@@ -81,20 +81,20 @@ export default function PersistentDrawerLeft(props) {
   const classes = useStyles();
   const theme = useTheme();
   console.log(props)
-  //const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-//   const handleDrawerOpen = () => {
-//     setOpen(true);
-//   };
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
 
-//   const handleDrawerClose = () => {
-//     setOpen(false);
-//   };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-      {/* <AppBar
+      <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
@@ -113,7 +113,7 @@ export default function PersistentDrawerLeft(props) {
             Jobs
           </Typography>
         </Toolbar>
-      </AppBar> */}
+      </AppBar>
       <Drawer
         className={classes.drawer}
         variant="persistent"
