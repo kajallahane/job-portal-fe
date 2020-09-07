@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OutlinedCard from '../assests/cards'
 import PersistentDrawerLeft from '../assests/drawer'
-import { getJobList } from "../../server/Server";
+import { getJobList, fetchCandidate } from "../../server/Server";
 import './joblist.css'
 
 export default function JobList(props) {
@@ -11,8 +11,14 @@ export default function JobList(props) {
         setJobs(result.data);
     }
 
+    async function getCandidateData() {
+        const response =  await fetchCandidate('123')
+         sessionStorage.setItem('candidateData', JSON.stringify(response.data));
+    }
+
     useEffect(() => {
         fetchJobs();
+        getCandidateData();
     }, []);
 
 

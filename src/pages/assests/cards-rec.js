@@ -24,9 +24,7 @@ const useStyles = makeStyles({
 });
 
 export default function RequestCard(props) {
-  // const classes = useStyles();
-  // const bull = <span className={classes.bullet}> • </span>;
-  console.log("props >>",props)
+ 
   const {jobrequest} = props
   return (
     <Card  variant="outlined" onClick={ () => { 
