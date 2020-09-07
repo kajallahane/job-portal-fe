@@ -24,16 +24,16 @@ const useStyles = makeStyles({
 });
 
 export default function RequestCard(props) {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}> • </span>;
+  // const classes = useStyles();
+  // const bull = <span className={classes.bullet}> • </span>;
   return (
-    <Card className={classes.root} variant="outlined" onClick={ () => { props.history.history.push("/requestStatusRec")}}>
+    <Card  variant="outlined" onClick={ () => { props.history.history.push("/requestStatusRec/?id=567")}}>
       <CardContent>
         <Typography variant="h5" component="h5">
-            {props.title}{bull}{props.location}{bull}{props.experience}
+            {props.jobDetails.title} . {props.jobDetails.location} . {props.jobDetails.experience}
         </Typography>
         <Typography variant="h5" component="h5">
-            {props.candidateName}{bull}{props.mobileNo}{bull}{props.experience}
+            {props.candidateDetails.name} |  {props.candidateDetails.emailId} | {props.candidateDetails.contact} | {props.candidateDetails.experience} | {props.candidateDetails.noticePeriod}
         </Typography>
       </CardContent>
       {/* <CardActions>
