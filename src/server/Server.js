@@ -13,16 +13,16 @@ export const getCandidateJobRequestList = (candidateId) => (
 )
 
 export const fetchCandidate = (candidateId) => (
-   axios.get(EndPoint.APP_BASE_URL + EndPoint.CANDIDATE_INFO + candidateId)
+  axios.get(EndPoint.APP_BASE_URL + EndPoint.CANDIDATE_INFO + candidateId)
 )
 
 
 export const addJobRequest = (data) => (
-  axios.post(EndPoint.APP_BASE_URL + EndPoint.ADD_JOB_REQUEST, { data })
-      .then(res => {
-        return "200"
-  }).catch( res=> {
-    return "error"
-  })
+  axios.post(EndPoint.APP_BASE_URL + EndPoint.ADD_JOB_REQUEST, data)
+    .then(res => {
+      return "200"
+    }).catch(res => {
+      return "error"
+    })
 )
 

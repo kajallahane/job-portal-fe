@@ -23,7 +23,6 @@ class App extends React.Component {
                     <Route exact={true} path="/requestList" render={(props) => <RequestList {...props} />} />
                     <Route exact={true} path="/requestStatusDeatils" render={(props) => <RequestStatusDeatils {...props} />} />
                     <Route exact={true} path="/" render={(props) => <Home {...props} />} />
-                    <Route component={NoMatchPage} />
                 </div>
             </Router>
         );
