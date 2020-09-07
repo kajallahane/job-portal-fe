@@ -12,16 +12,20 @@ class Home extends React.Component {
 
   render = () => {
     return (
-      <Container maxWidth="sm" >
+      <div>
         <div className="jobs-home-container">
-          <Button onClick={() => this.props.history.push("/candidatehome")} variant="contained" color="primary">
-            Candidate login
+          <div className="jobs-home-button-container">
+            <Button onClick={() => this.props.history.push("/candidatehome")} variant="contained" color="primary">
+              Candidate login
+          </Button>
+          </div>
+          <div className="jobs-home-button-container">
+            <Button onClick={() => this.props.history.push("/requestList")} variant="contained" color="secondary">
+              Recruiter login
         </Button>
-          <Button onClick={() => this.props.history.push("/requestList")} variant="contained" color="secondary">
-            Recruiter login
-        </Button>
-        </div>
-      </Container>
+          </div>
+        </div >
+      </div >
     );
   }
 }

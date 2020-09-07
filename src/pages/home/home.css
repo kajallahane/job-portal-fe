@@ -1,5 +1,14 @@
 .jobs-home-container {
+  width: 800px;
+  height: 500px;
   margin: auto;
-  width: 100%;
   margin-top: 100px;
+  box-shadow: 5px 5px 4px 5px #888888;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.jobs-home-button-container {
+  margin-left: 35%;
 }
