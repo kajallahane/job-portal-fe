@@ -20,9 +20,9 @@ export const fetchCandidate = (candidateId) => (
 export const addJobRequest = (data) => (
   axios.post(EndPoint.APP_BASE_URL + EndPoint.ADD_JOB_REQUEST, data)
     .then(res => {
-      return "200"
+      return "Applied Successfully "
     }).catch(res => {
-      return "error"
+      return "Error ocuured while saving job request"
     })
 )
 
