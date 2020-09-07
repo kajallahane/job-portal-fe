@@ -30,10 +30,10 @@ export default function RequestList(props){
                 <PersistentDrawerLeft routeData={routeData} history={props.history}/>
                     <div id="cardsDiv" style={{"margin": "auto","width": "65%"}}>
                     {   
-                        requestData.map( obj=> {
-                            obj.history = props
-                            return RequestCard(obj)
-                        })
+                        requestData.map( obj=> 
+                           
+                            <RequestCard jobrequest={obj} history={props.history}/>
+                        )
                     }
                     </div>
             </div>

@@ -10,7 +10,6 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 
 export default function RequestTimeline(props) {
   const { jobRequestStatus } = props;
-  console.log("props--->",props)
 
   return (
     <div>
