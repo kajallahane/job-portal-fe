@@ -26,3 +26,12 @@ export const addJobRequest = (data) => (
     })
 )
 
+export const updateJobRequestStatus = (data) => (
+  axios.post(EndPoint.APP_BASE_URL + EndPoint.UPDATE_JOB_REQUEST_STATUS, data)
+    .then(res => {
+      return "Successfully Updated"
+    }).catch(res => {
+      return "Error ocuured while saving job request"
+    })
+  )
+

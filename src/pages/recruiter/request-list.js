@@ -13,6 +13,7 @@ export default function RequestList(props) {
     const [requestData, setRequestData] = useState([]);
     async function fetchRequest() {
         const result = await getRequestList()
+        console.log("data api-->>",result.data)
         setRequestData(result.data);
     }
 
