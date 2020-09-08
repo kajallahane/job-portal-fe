@@ -89,15 +89,17 @@ export default function PersistentDrawerLeft(props) {
           <Typography variant="h6" noWrap>
             Job Portal
           </Typography>
-          <IconButton
-            edge="end"
-            aria-label="account of current user"
-            aria-haspopup="true"
-            onClick={() => { props.history.push("/") }}
-            color="inherit"
-          >
-            Logout
+          <div className="logout-button">
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-haspopup="true"
+              onClick={() => { props.history.push("/") }}
+              color="inherit"
+            >
+              Logout
           </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
