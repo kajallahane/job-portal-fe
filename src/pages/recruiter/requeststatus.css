@@ -1,0 +1,13 @@
+.job-request-status-change {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.job-request-status-dropdown{
+    width: 120px;
+}
+
+.job-request-status-update-button {
+    margin-top: 30px;
+}

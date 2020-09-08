@@ -23,7 +23,7 @@ export default function RequestStatusDeatils(props) {
     const [status, setStatus] = useState('');
 
     async function updateJobRequest() {
-        const updateData = { jobId: jobRequest.jobRequestId, newStatus: status, recruiterId: "567" }
+        const updateData = { jobRequestId: jobRequest.jobRequestId, newStatus: status, recruiterId: "567", candidateId: "123", }
         const response = await updateJobRequestStatus(updateData)
         alert(response)
         props.history.push("/requestStatusDeatils/?id=567")

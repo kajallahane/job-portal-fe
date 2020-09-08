@@ -5,14 +5,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {addJobRequest } from '../../server/Server'
+import { addJobRequest } from '../../server/Server'
 
 export default function OutlinedCard(props) {
-  
+
   async function createJobRequest() {
     let candidate = sessionStorage.getItem("candidateData")
     candidate = JSON.parse(candidate)
-    const jobRequestObj = {"candidateDetails":candidate, "jobDetails":props, "jobRequestId":"1234567890abcd", "jobRequestStatus": ["Applied"]}
+    const jobRequestId = Math.floor(Math.random() * 100000)
+    const jobRequestObj = { "candidateDetails": candidate, "jobDetails": props, "jobRequestId": jobRequestId.toString(), "jobRequestStatus": ["Applied"] }
     const response = await addJobRequest(jobRequestObj)
     alert(response)
   }
@@ -28,7 +29,7 @@ export default function OutlinedCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={ () => createJobRequest()}size="small">Apply</Button>
+        <Button onClick={() => createJobRequest()} size="small">Apply</Button>
       </CardActions>
     </Card>
   );
