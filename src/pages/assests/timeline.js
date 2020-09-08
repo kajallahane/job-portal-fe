@@ -39,10 +39,19 @@ export default function RequestTimeline(props) {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            {jobRequestStatus.includes("Apprrove/Rejected") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
+            {jobRequestStatus.includes("Rejected") ? <TimelineDot style={{ "backgroundColor": "#FF0000" }} /> : <TimelineDot />}
+            {/* <TimelineDot/> */}
+            <TimelineConnector />
+          </TimelineSeparator>
+
+          <TimelineContent >Rejected</TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            {jobRequestStatus.includes("Approved") ? <TimelineDot style={{ "backgroundColor": "#34ca22" }} /> : <TimelineDot />}
             {/* <TimelineDot/> */}
           </TimelineSeparator>
-          <TimelineContent >Apprrove/Rejected</TimelineContent>
+          <TimelineContent >Approved</TimelineContent>
         </TimelineItem>
       </Timeline>
     </div>
