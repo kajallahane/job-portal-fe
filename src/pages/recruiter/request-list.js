@@ -13,7 +13,6 @@ export default function RequestList(props) {
     const [requestData, setRequestData] = useState([]);
     async function fetchRequest() {
         const result = await getRequestList()
-        console.log("data api-->>",result.data)
         setRequestData(result.data);
     }
 
@@ -22,8 +21,7 @@ export default function RequestList(props) {
     }, []);
 
     const routeData = [
-        { url: "/requestList", item: "Request List" },
-        { url: "/analytics", item: "Analytics" }
+        { url: "/requestList", item: "Request List" }
     ]
 
     return (

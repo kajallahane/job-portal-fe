@@ -11,8 +11,7 @@ import './requeststatus.css'
 
 export default function RequestStatusDeatils(props) {
     const routeData = [
-        { url: "/requestList", item: "Request List" },
-        { url: "/analytics", item: "Analytics" }
+        { url: "/requestList", item: "Request List" }
     ]
     let jobRequest = sessionStorage.getItem("jobDetails")
     jobRequest = JSON.parse(jobRequest)
